@@ -1,0 +1,20 @@
+<div class="c-inputs-stacked">
+    <label class="c-input c-checkbox">
+        <input
+                type="checkbox"
+                value="{{ field_type.presenter.enabled ? field_type.value : 'enable' }}"
+                data-provides="minioak.field_type.twofa-toggle"
+                name="{{ field_type.input_name }}"
+                {{ field_type.presenter.enabled ? 'checked' }}>
+    
+        <span class="c-indicator"></span>
+    
+        Enable 2FA Authentication
+    </label>
+    
+    {% if field_type.presenter.enabled %}
+    <div data-provides="minioak.field_type.twofa-qr">
+        {{ field_type.presenter.qr_code | raw }}
+    </div>
+    {% endif %}
+</div>

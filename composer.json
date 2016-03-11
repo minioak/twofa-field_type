@@ -1,0 +1,13 @@
+{
+    "name": "minioak/twofa-field_type",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Minioak\\TwofaFieldType\\": "src/"
+        }
+    },
+    "require": {
+        "laravel/framework": "5.1.*",
+        "pragmarx/google2fa": "^0.7.1"
+    }
+}
